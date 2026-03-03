@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* This simulates your background watermark */
+        .watermark {
+            position: absolute;
+            top: 20%; left: 10%;
+            width: 80%; opacity: 0.05;
+            z-index: -1;
+            transform: rotate(-15deg);
+        }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="bg-gray-100 p-10">
+
+    <div class="max-w-4xl mx-auto mb-6 no-print flex justify-end">
+        <button onclick="window.print()" class="bg-blue-600 text-white px-6 py-2 rounded shadow hover:bg-blue-700">
+            Download PDF / Print
+        </button>
+    </div>
+
+    <div id="invoice" class="relative max-w-4xl mx-auto bg-white p-16 shadow-lg min-h-[1100px] overflow-hidden">
+        
+        <div class="watermark text-9xl">🧊</div>
+
+        <div class="flex justify-between items-start border-b-2 border-blue-500 pb-4 mb-8">
+            <h1 class="text-4xl font-light text-blue-900 tracking-widest">INVOICE</h1>
+        </div>
+
+        <div class="flex justify-between mb-12 text-sm">
+            <div>
+                <p class="font-bold uppercase">From:</p>
+                <p>Ahmed Swaroar</p>
+                <p>STUDIO 71</p>
+                <p>+8801521433946</p>
+            </div>
+            <div class="text-right">
+                <p class="font-bold uppercase">Bill To:</p>
+                <p id="client-name">Kamrul Islam Tuhin</p>
+            </div>
+        </div>
+
+        <div class="mb-8 text-sm">
+            <p><strong>Invoice #:</strong> 2026-001</p>
+            <p><strong>Date:</strong> February 26, 2026</p>
+        </div>
+
+        <table class="w-full text-left border-collapse mb-8">
+            <thead>
+                <tr class="bg-blue-600 text-white">
+                    <th class="p-3">Description</th>
+                    <th class="p-3">Rate</th>
+                    <th class="p-3 text-right">Amount</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700">
+                <tr class="border-b">
+                    <td class="p-3">Casing design of VeroBoard</td>
+                    <td class="p-3">1000 BDT</td>
+                    <td class="p-3 text-right">1000 BDT</td>
+                </tr>
+                <tr class="font-bold bg-gray-50">
+                    <td class="p-3" colspan="2">TOTAL</td>
+                    <td class="p-3 text-right">1000 BDT</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="mt-20 flex justify-between">
+            <div class="text-xs space-y-2">
+                <p class="font-bold">PAYMENT DETAILS:</p>
+                <p>Bkash: 01521433946</p>
+                <p>Nagad: 01521433946</p>
+                <p class="mt-4 italic">Please include Invoice # in reference.</p>
+            </div>
+            
+            <div class="border-4 border-red-600 text-red-600 font-black rounded-full p-4 transform -rotate-12 opacity-80">
+                PAID
+            </div>
+        </div>
+    </div>
+</body>
+</html>
