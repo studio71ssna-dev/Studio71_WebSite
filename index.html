@@ -3,75 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio 71 | Game Development Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Studio 71 | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Studio 71</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#games">Games</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar">
+        <div class="logo">STUDIO 71</div>
+        <div class="nav-links">
+            <a href="#work">Products</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 id="typewriter">SYSTEM.INITIALIZE()</h1>
+            <p class="subtitle">Independent development house dedicated to games with a pulse.</p>
         </div>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="container hero-content">
-                <h2>Forging Immersive Worlds.</h2>
-                <p>Welcome to Studio 71, where geometric logic meets narrative depth. Explore our latest puzzle and adventure titles.</p>
-                <a href="#games" class="btn btn-primary">View Creations</a>
+    <section id="work" class="container">
+        <h2 class="section-header">In-House Products</h2>
+        <div id="project-grid" class="project-grid">
             </div>
-        </section>
+    </section>
 
-        <section id="games">
-            <div class="container">
-                <h2>Our Creations</h2>
-                <div class="games-grid">
-                    <article class="game-card green-glow">
-                        <img src="https://via.placeholder.com/400x250/000000/006D44?text=Game+1+Voxel+Vanguard" alt="Game 1 Title">
-                        <h3>Voxel Vanguard</h3>
-                        <p>An isometric puzzle adventurer. Explore the complex geometric ruins of a lost civilization.</p>
-                        <a href="#" class="btn btn-secondary">Play Now</a>
-                    </article>
-                    <article class="game-card red-glow">
-                        <img src="https://via.placeholder.com/400x250/000000/FF3A3A?text=Game+2+Aether+Rift" alt="Game 2 Title">
-                        <h3>Aether Rift</h3>
-                        <p>A fast-paced sci-fi shooter. Fight across interdimensional planes and master geometry itself.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </article>
-                     <article class="game-card green-glow">
-                        <img src="https://via.placeholder.com/400x250/000000/006D44?text=Game+3+Labyrinth" alt="Game 3 Title">
-                        <h3>Chrono-Labyrinth</h3>
-                        <p>A narrative-driven maze crawler, with time-bending puzzles in geometric domains.</p>
-                        <a href="#" class="btn btn-secondary">About</a>
-                    </article>
-                </div>
-            </div>
-        </section>
+    <hr class="divider">
 
-        <section id="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>Have a question or a project in mind? We'd love to hear from you.</p>
-                <div class="contact-methods">
-                    <a href="mailto:contact@studio71.com" class="btn btn-primary"><i class="fas fa-envelope"></i> contact@studio71.com</a>
-                    <a href="https://github.com/YourUsername" class="btn btn-secondary"><i class="fab fa-github"></i> github.com/Studio71</a>
-                </div>
+    <section id="services" class="container">
+        <h2 class="section-header">Operational Services</h2>
+        <div id="services-grid" class="services-grid">
             </div>
-        </section>
-    </main>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-header">Establish Connection</h2>
+        <form class="tactical-form">
+            <div class="input-group">
+                <label>ID / Alias</label>
+                <input type="text" placeholder="Designation">
+            </div>
+            <div class="input-group">
+                <label>Comm-Link</label>
+                <input type="email" placeholder="email@domain.com">
+            </div>
+            <div class="input-group">
+                <label>Transmission</label>
+                <textarea rows="5" placeholder="Enter data..."></textarea>
+            </div>
+            <button type="submit" class="button">Send Transmission</button>
+        </form>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Studio 71. All Rights Reserved.</p>
-        </div>
+        <p>&copy; 2026 Studio 71. End of line.</p>
     </footer>
+
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>

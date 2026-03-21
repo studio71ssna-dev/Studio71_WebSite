@@ -1,0 +1,78 @@
+.section-header {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--accent-green);
+    padding-left: 20px;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    border-color: var(--accent-green);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-image { height: 180px; background: #151515; }
+.card-content { padding: 25px; }
+
+/* Buttons & Badges */
+.button {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--accent-green);
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: var(--accent-green);
+    box-shadow: 0 0 15px var(--glow-green);
+}
+
+.small-btn { padding: 8px 15px; font-size: 0.7rem; }
+
+.badge {
+    background: var(--accent-green);
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    padding: 30px;
+    border: 1px solid var(--border-color);
+}
+
+/* Forms */
+.tactical-form { max-width: 600px; }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; font-size: 0.7rem; color: var(--accent-green-bright); margin-bottom: 5px; }
+input, textarea {
+    width: 100%; background: var(--card-bg); border: 1px solid var(--border-color);
+    padding: 12px; color: white;
+}

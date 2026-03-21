@@ -1,0 +1,35 @@
+:root {
+    --bg-base: #0A0A0A;
+    --bg-dot: #1a1a1a;
+    --card-bg: #111111;
+    --text-main: #FDF7DD;
+    --text-muted: #a0a0a0;
+    --accent-green: #006D44;
+    --accent-green-bright: #00ff9d;
+    --glow-green: rgba(0, 109, 68, 0.6);
+    --border-color: #222222;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-base);
+    background-image: radial-gradient(var(--bg-dot) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+}
