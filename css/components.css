@@ -1,3 +1,4 @@
+/* Section Headers */
 .section-header {
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -7,29 +8,231 @@
     padding-left: 20px;
 }
 
-/* Projects */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.1rem;
+}
+
+/* ── Project Cards ── */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Use auto-fill and a slightly larger min-width to prevent squishing */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
+    margin-top: 20px;
 }
 
 .project-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* FIX: This forces the image and content to stay in one vertical column */
+    display: flex;
+    flex-direction: column; 
+    
+    height: 100%; /* Ensures all cards in a row have equal height */
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-card:hover {
     border-color: var(--accent-green);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.card-image { height: 180px; background: #151515; }
-.card-content { padding: 25px; }
+.card-image {
+    width: 100%;
+    height: 220px; /* Fixed height for the image area */
+    background-color: #151515;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    
+    /* These ensure the background image covers the area properly */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-/* Buttons & Badges */
+.img-placeholder {
+    font-family: monospace;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pushes the footer/buttons to the bottom */
+}
+
+.badge {
+    align-self: flex-start;
+    background: var(--accent-green);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 900;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.game-title {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+    color: var(--text-main);
+}
+
+.project-subtitle {
+    font-size: 0.85rem;
+    color: var(--accent-green-bright);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    background: #1a1a1a;
+    color: #888;
+    padding: 4px 10px;
+    border: 1px solid #222;
+}
+
+.card-footer {
+    margin-top: auto; /* Aligns buttons to the bottom of the card */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.store-links {
+    display: flex;
+    gap: 12px;
+}
+
+.store-icon {
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.store-icon:hover {
+    transform: scale(1.2);
+}
+
+.small-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+/* Badges & Tags */
+.badge {
+    background: var(--accent-green);
+    color: white;
+    font-size: 0.6rem;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.tags {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    border: 1px solid #333;
+    padding: 2px 8px;
+}
+
+/* Store Links & Footer */
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+}
+
+.store-links { display: flex; gap: 15px; }
+.store-icon {
+    text-decoration: none;
+    font-size: 1.2rem;
+    filter: grayscale(1);
+    opacity: 0.4;
+    transition: 0.3s;
+}
+.store-icon:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.service-title { color: var(--accent-green-bright); margin-bottom: 10px; }
+.service-desc { font-size: 0.9rem; color: var(--text-muted); }
+.service-status { 
+    margin-top: 15px; 
+    font-size: 0.6rem; 
+    text-transform: uppercase; 
+    color: var(--accent-green);
+}
+
+/* Buttons */
 .button {
     background: transparent;
     color: var(--text-main);
@@ -48,31 +251,88 @@
 
 .small-btn { padding: 8px 15px; font-size: 0.7rem; }
 
-.badge {
-    background: var(--accent-green);
-    font-size: 0.6rem;
-    padding: 2px 8px;
-    margin-bottom: 10px;
-    display: inline-block;
+/* Contact Form */
+.tactical-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-/* Services */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.service-item {
-    padding: 30px;
+.input-group label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.input-group input,
+.input-group textarea {
+    background: var(--card-bg);
     border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 12px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    resize: vertical;
 }
 
-/* Forms */
-.tactical-form { max-width: 600px; }
-.input-group { margin-bottom: 20px; }
-.input-group label { display: block; font-size: 0.7rem; color: var(--accent-green-bright); margin-bottom: 5px; }
-input, textarea {
-    width: 100%; background: var(--card-bg); border: 1px solid var(--border-color);
-    padding: 12px; color: white;
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #444;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--accent-green);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .section-header {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        margin-bottom: 28px;
+    }
+
+    .card-content { padding: 18px; }
+
+    .game-title { font-size: 1.2rem; }
+
+    .service-item { padding: 22px; }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .button { width: 100%; text-align: center; }
+
+    .tactical-form { gap: 18px; }
+}
+
+@media (max-width: 480px) {
+    .project-grid { grid-template-columns: 1fr; }
+
+    .card-image { height: 160px; }
 }

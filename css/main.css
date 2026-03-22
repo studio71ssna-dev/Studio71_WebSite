@@ -33,3 +33,8 @@ body {
     height: 1px;
     background: linear-gradient(to right, transparent, var(--border-color), transparent);
 }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .container { padding: 60px 16px; }
+}

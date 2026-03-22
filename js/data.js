@@ -1,53 +1,149 @@
 export const inHouseProducts = [
     {
-        title: "Virus Frenzy",
-        subtitle: "2D Action-Platformer",
-        description: "Award-winning mobile game. Secured 1st Runner-Up at Techfest, IIT Bombay.",
-        tags: ["Unity", "Android", "C#"],
-        link: "https://studio-71.itch.io/virus-frenzy",
-        featured: true
+    id: "echoes71",
+    title: "Echoes of 71",
+    subtitle: "Narrative Shooter",
+    description:
+      "A story-driven experience set during the Liberation War.",
+
+    image: "assets/images/Echoesof71.png",
+    url: "https://studio-71.itch.io/echoes-of-71",
+    tags: ["Unity", "PC", "Story"],
+
+    links: {
+      playstore: "#",
+      steam: "#",
+      itch: "https://studio-71.itch.io/echoes-of-71"
+    },
+
+    featured: true
+        
     },
     {
-        title: "Radiant Ruin",
-        subtitle: "Turn-based Roguelite RPG",
-        description: "Features a unique real-time engagement mechanic and procedural dungeon generation.",
-        tags: ["Unity", "C#", "Game Design"],
-        link: "#"
+    id: "virus-frenzy",
+    title: "Virus Frenzy",
+    subtitle: "Award Winning 2D Platformer",
+    description: "Play as a antivirus and conquer world of Bacteria",
+
+    image: "assets/images/VF.PNG",
+
+    // ⭐ main card click destination
+    url: "https://studio-71.itch.io/virus-frenzy",
+
+    tags: ["Unity", "Physics", "Mobile"],
+
+    links: {
+      itch: "https://studio-71.itch.io/virus-frenzy",
+      playstore: "#",
+      steam: null
     },
-    {
-        title: "Whisper-AI Tower Defense",
-        subtitle: "Voice-Controlled Strategy",
-        description: "Integrating OpenAI's Whisper for real-time unit commanding via voice.",
-        tags: ["AI", "Unity", "HCI"],
-        link: "#"
-    },
-    {
-        title: "6 DOF Robotic Arm",
-        subtitle: "Hardware Interface",
-        description: "Custom control interface for a 6-Degree of Freedom robotic assembly.",
-        tags: ["Robotics", "IoT", "C++"],
-        link: "#"
-    },
-    {
-        title: "Tunnel Vision",
-        subtitle: "Tactical Shooter",
-        description: "Top-down shooter focusing on limited visibility and light-based mechanics.",
-        tags: ["Unity", "Level Design"],
-        link: "#"
+
+    featured: true
+  },
+
+
+  {
+    id: "ruby-starry-night",
+    title: "Ruby Lost in the Starry Night",
+    subtitle: "Puzzle Platformer",
+    description:
+      "A visually stunning journey through celestial landscapes. Solve gravity-based puzzles to guide Ruby back home.",
+
+    image: "assets/images/RLISN.png",
+
+    url: "https://studio-71.itch.io/ruby-lost-in-the-starry-night",
+
+    tags: ["Unity", "2D Artist", "C#"],
+
+    links: {
+      itch: "https://studio-71.itch.io/ruby-lost-in-the-starry-night",
+      playstore: "#",
+      steam: null
     }
+  },
+
+
+  {
+    id: "tri-form-racer",
+    title: "Tri-form Racer",
+    subtitle: "High-Speed Arcade Racer",
+    description:
+      "Switch between three unique vehicle forms on-the-fly to navigate shifting tracks and outpace rivals.",
+
+    image: "assets/images/TFR.png",
+
+    url: "https://studio-71.itch.io/tri-form-racer",
+
+    tags: ["Unity", "Physics", "Mobile"],
+
+    links: {
+      itch: "https://studio-71.itch.io/tri-form-racer",
+      playstore: "#",
+      steam: null
+    }
+  },
+
+
+  {
+    id: "kings-decree",
+    title: "Kings Decree",
+    subtitle: "Grand Strategy / Management",
+    description:
+      "Rule your kingdom with an iron fist or a gentle hand. Every choice alters the procedural history of your world.",
+
+    image: "assets/images/Kings gambit.png",
+
+    url: "#",
+
+    tags: ["Unity", "UI/UX", "System Design"],
+
+    links: {
+      itch: null,
+      playstore: null,
+      steam: "#"
+    }
+  },
+
+
+  {
+    id: "tunnel-vision",
+    title: "Tunnel Vision",
+    subtitle: "Gamejam Plus 2025-26 Continental Semifinalist",
+    description: "FPS Shooter & Railway Shooter project",
+
+    image: "assets/images/TV.PNG",
+
+    url: "https://studio-71.itch.io/tunnelvison",
+
+    tags: ["Unity", "Logic", "Optimization"],
+
+    links: {
+      itch: "https://studio-71.itch.io/tunnelvison",
+      playstore: "#",
+      steam: null
+    }
+  }
 ];
 
 export const services = [
-    {
-        title: "XR & VR Development",
-        description: "High-immersion simulations for training and enterprise using Meta Quest & SteamVR."
+    { 
+        title: "XR & VR Development", 
+        desc: "Enterprise-grade simulations and training modules for Meta Quest & SteamVR." 
     },
-    {
-        title: "Full-Stack Web Systems",
-        description: "Scalable inventory management and e-commerce solutions using ASP.NET Core & MERN."
+    { 
+        title: "AR Application Development", 
+        desc: "Enterprise-grade simulations and training modules for Meta Quest & SteamVR." 
     },
-    {
-        title: "3D Asset Pipeline",
-        description: "Game-ready 3D modeling, texturing, and rigging using Blender and SolidWorks."
+    { 
+        title: "2D game application Development", 
+        desc: "Inventory management and e-commerce solutions using ASP.NET Core & MERN." 
+    },
+    { 
+        title: "3D game application Development", 
+        desc: "Inventory management and e-commerce solutions using ASP.NET Core & MERN." 
+    },
+    { 
+        title: "3D Asset Pipeline", 
+        desc: "Game-ready modeling, PBR texturing, and rigging in Blender." 
     }
 ];
