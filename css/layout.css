@@ -105,3 +105,42 @@ footer {
         width: 100%;
     }
 }
+
+/* ── Hero Content Additions ── */
+
+/* Hero Logo Sizing & Spacing */
+.hero-logo {
+    width: 400px; /* Adjust this to match the size you want */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Justified Text Formatting */
+.subtitle.justified-text {
+    text-align: justify;
+    text-align-last: center; /* Ensures the last line stays centered */
+    max-width: 900px; /* Prevents text from stretching across the entire screen */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Animations ── */
+
+/* Smooth Fade-in and slide-up effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeInSlideUp 1.5s ease-out forwards;
+    /* Uncomment the line below if you want the logo to wait 0.5s before appearing */
+    /* animation-delay: 0.5s; */ 
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
