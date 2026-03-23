@@ -111,7 +111,7 @@ export const inHouseProducts = [
     subtitle: "Gamejam Plus 2025-26 Continental Semifinalist",
     description: "FPS Shooter & Railway Shooter project",
 
-    image: "assets\images\TV.png",
+    image: "assets/images/TV.png",
 
     url: "https://studio-71.itch.io/tunnelvison",
 
