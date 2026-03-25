@@ -26,8 +26,6 @@ export const inHouseProducts = [
     description: "Play as a antivirus and conquer world of Bacteria",
 
     image: "assets/images/VF.PNG",
-
-    // ⭐ main card click destination
     url: "https://studio-71.itch.io/virus-frenzy",
 
     tags: ["Unity", "Physics", "Mobile"],
@@ -128,22 +126,18 @@ export const inHouseProducts = [
 export const services = [
     { 
         title: "XR & VR Development", 
-        desc: "Enterprise-grade simulations and training modules for Meta Quest & SteamVR." 
+        desc: "Fully immersive virtual reality experiences and cross-reality solutions tailored for enterprise training, simulation, and interactive entertainment." 
     },
     { 
         title: "AR Application Development", 
-        desc: "Enterprise-grade simulations and training modules for Meta Quest & SteamVR." 
+        desc: "Interactive augmented reality solutions for mobile and wearable devices, enhancing real-world environments with engaging digital overlays." 
     },
     { 
         title: "2D game application Development", 
-        desc: "Inventory management and e-commerce solutions using ASP.NET Core & MERN." 
+        desc: "Engaging, highly-optimized 2D gaming experiences featuring captivating mechanics, vibrant sprite animations, and smooth performance." 
     },
     { 
         title: "3D game application Development", 
-        desc: "Inventory management and e-commerce solutions using ASP.NET Core & MERN." 
-    },
-    { 
-        title: "3D Asset Pipeline", 
-        desc: "Game-ready modeling, PBR texturing, and rigging in Blender." 
+        desc: "Full-cycle 3D game creation from initial concept and prototyping to multiplayer networking and final multi-platform release." 
     }
 ];
