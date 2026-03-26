@@ -13,7 +13,8 @@ export default function Home() {
         e.preventDefault();
         setIsSending(true);
         try {
-            const res = await fetch('http://localhost:3000/api/order', {
+            // Updated to use your LIVE Render backend URL
+            const res = await fetch('https://studio71-backend.onrender.com/api/order', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
