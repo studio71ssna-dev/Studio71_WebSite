@@ -1,0 +1,9 @@
+/* 1. Standard CSS Imports MUST go first */
+@import './assets/css/main.css';
+@import './assets/css/layout.css';
+@import './assets/css/components.css';
+
+/* 2. Tailwind directives go after */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
