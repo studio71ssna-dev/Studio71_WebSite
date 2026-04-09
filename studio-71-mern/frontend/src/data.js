@@ -248,6 +248,14 @@ export const services = [
 
         desc: "Full-cycle 3D game creation from initial concept and prototyping to multiplayer networking and final multi-platform release." 
 
+    },
+
+    { 
+
+        title: "CAD model design with SOLIDWORKS or Fusion360", 
+
+        desc: "All type of Mechanical 3D Part and Assembly modeling and Drawing file should be provided " 
+
     }
 
 ]; 
