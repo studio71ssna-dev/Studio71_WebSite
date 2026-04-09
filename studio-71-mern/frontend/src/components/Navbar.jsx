@@ -10,11 +10,11 @@ export default function Navbar() {
                 <span className="logo-text font-black tracking-widest">STUDIO 71</span>
             </div>
 
-            {/* Desktop Links */}
-            <div className="hidden md:flex gap-8 uppercase text-sm tracking-widest text-[#a0a0a0]">
-                <a href="#work" className="hover:text-[#00ff9d] transition-colors">Products</a>
-                <a href="#services" className="hover:text-[#00ff9d] transition-colors">Services</a>
-                <a href="#contact" className="hover:text-[#00ff9d] transition-colors">Contact</a>
+            
+            <div className="hidden md:flex gap-8 uppercase text-sm tracking-widest">
+                <a href="#work" className="text-[#00ff9d] font-bold no-underline hover:text-white transition-colors">Products</a>
+                <a href="#services" className="text-[#00ff9d] font-bold no-underline hover:text-white transition-colors">Services</a>
+                <a href="#contact" className="text-[#00ff9d] font-bold no-underline hover:text-white transition-colors">Contact</a>
             </div>
 
             {/* Mobile Hamburger Button */}
@@ -31,9 +31,9 @@ export default function Navbar() {
             {/* Mobile Menu Backdrop & Links */}
             <div className={`nav-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}></div>
             <div className={`nav-links ${isOpen ? 'open' : ''} md:hidden`}>
-                <a href="#work" onClick={() => setIsOpen(false)}>Products</a>
-                <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
-                <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+                <a href="#work" onClick={() => setIsOpen(false)} className="text-[#00ff9d] font-bold no-underline">Products</a>
+                <a href="#services" onClick={() => setIsOpen(false)} className="text-[#00ff9d] font-bold no-underline">Services</a>
+                <a href="#contact" onClick={() => setIsOpen(false)} className="text-[#00ff9d] font-bold no-underline">Contact</a>
             </div>
         </nav>
     );
