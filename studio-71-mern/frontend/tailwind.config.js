@@ -5,10 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   corePlugins: {
-    preflight: false, // <-- This tells Tailwind to stop resetting your vanilla CSS
+    preflight: false,
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        's71-dark': '#111',
+        's71-green': '#006D44',
+        's71-bright': '#00ff9d',
+        's71-text': '#FDF7DD',
+        's71-muted': '#a0a0a0',
+      }
+    },
   },
   plugins: [],
 }
