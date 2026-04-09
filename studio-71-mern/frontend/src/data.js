@@ -258,4 +258,11 @@ export const services = [
 
     }
 
-]; 
+];
+
+export const orderTiers = [
+    { id: 'prototype', title: '2D Prototype', price: 5000, desc: 'Basic 2D game mechanics prototype.' },
+    { id: 'vr_module', title: 'VR Module', price: 15000, desc: 'Interactive VR training or experience module.' },
+    { id: 'full_3d', title: 'Full 3D Production', price: 30000, desc: 'Complete 3D game lifecycle production.' },
+    { id: 'unity_consulting', title: 'Unity Architecture Consulting', price: 10000, desc: 'Deep dive into C# optimization and Unity project structuring.' }
+];
