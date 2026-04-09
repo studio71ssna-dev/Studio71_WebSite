@@ -4,21 +4,18 @@ const Order = require("../models/Order");
 // @route   POST /api/order
 const createOrder = async (req, res) => {
     try {
-        const { clientName, email, description } = req.body;
+        // Now accepting 'amount' from the frontend!
+        const { clientName, email, description, amount } = req.body;
 
-        if (!clientName || !email || !description) {
+        if (!clientName || !email || !description || !amount) {
             return res.status(400).json({ success: false, message: "All fields are required" });
         }
-
-        // Generate a mock price for the invoice (e.g., between 5,000 and 20,000 BDT)
-        // You can replace this with actual pricing logic later!
-        const calculatedAmount = Math.floor(Math.random() * 15000) + 5000;
 
         const newOrder = await Order.create({
             clientName,
             email,
             description,
-            amount: calculatedAmount
+            amount // Use the exact tier amount passed from the React form
         });
 
         res.status(201).json({ success: true, message: "Order saved successfully", data: newOrder });
